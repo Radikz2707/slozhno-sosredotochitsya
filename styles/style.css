@@ -18,10 +18,9 @@
 
 .header {
   inline-size: 100%;
-  block-size: 100vh;
   position: relative;
 }
-.header::before {
+.header::before, footer::before{
   content: "";
   position: absolute;
   left: 0;
@@ -32,7 +31,7 @@
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
 }
-.header::after {
+.header::after, footer::after {
   content: "";
   position: absolute;
   top: 0;
@@ -85,6 +84,7 @@
 .header__theme-menu-button {
   outline: none;
   border: 0;
+  inline-size: 70px;
   padding: 0 13px;
   color: var(--accent-color);
   background-color: transparent;
@@ -97,16 +97,33 @@
   text-transform: lowercase;
   cursor: pointer;
 }
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+.header__theme-menu-button:hover  {
+  border: 1px solid var(--button_hover-border_color);
+}
+.header__theme-menu-button:focus  {
+  appearance: none;
+  outline: none;
+  border: 0;
+}
+.header__theme-menu-button:focus-visible  {
+  border-block-end: 1px solid var(--accent-color);
+}
+
 .header__title {
   margin-block-start: 70px;  
 }
 .title  {
   color: #db00ff;
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--shadow_color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 83.5%;
+  text-transform: lowercase;
 }
 .header__subtitle {
   margin: 53px 0 66px;
@@ -155,19 +172,30 @@
   row-gap: 10px;
 }
 .main__content-text_description {
-  color: #f1b2ce;
+  color: var(--text_color);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
 }
 .shadow-text {
-  color: #F1B2CE;
+  color: var(--text_color);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--shadow_color);
+}
+.shadow-text:hover {
+  border-block-end: 1px solid var(--shadow-text_border-color);
+}
+.shadow-text:focus  {
+  appearance: none;
+  outline: none;
+  border: 0;
+}
+.shadow-text:focus-visible  {
+  border: 1px solid var(--shadow-text_border-color);
 }
 .main__content-img {
   inline-size: 100%;
@@ -193,4 +221,5 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }

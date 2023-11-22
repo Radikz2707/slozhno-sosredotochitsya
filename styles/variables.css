@@ -5,4 +5,9 @@
 
 :root {
   --accent-color: #ff0070;
+  --shadow_color: #ff0070;
+  --text_color: #F1B2CE;
+  --shadow-text_border-color: #F1B2CE;
+  --button_hover-border_color: rgba(255, 0, 111.89, 0.40);
+
 }
