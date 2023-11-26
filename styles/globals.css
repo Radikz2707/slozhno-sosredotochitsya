@@ -5,6 +5,10 @@
 *::after {
   box-sizing: border-box;
 }
+html  {
+  inline-size: 100%;
+  block-size: 100%;
+}
 
 body {
   min-inline-size: 375px;
