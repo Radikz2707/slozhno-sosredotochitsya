@@ -19,7 +19,7 @@
   background-image: url(../images/cover-image-light.png);
 }
 
-.page.theme_light .decorated-zone {
+p.page.theme_light .decorated-zone__text{
   display: none;
 }
 .header__theme-menu-button:hover {
