@@ -11,11 +11,10 @@
   */
 
   --accent-color: #353430;
-  --shadow_color: #FF8DCB;
+  --shadow_color: #ff8dcb;
   --text_color: #353430;
-  --shadow-text_border-color: #353430;
-  --button_hover-border_color: rgba(50, 49, 45, 0.40);
-  
+  --text-hadow_border-color: #353430;
+  --button_hover-border_color: rgba(50, 49, 45, 0.4);
 
   background-image: url(../images/cover-image-light.png);
 }
@@ -23,15 +22,15 @@
 .page.theme_light .decorated-zone {
   display: none;
 }
-.header__theme-menu-button:hover  {
+.header__theme-menu-button:hover {
   border: 1px solid var(--button_hover-border_color);
 }
-.header__theme-menu-button:focus-visible  {
+.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--accent-color);
 }
-.title-decor  {
+.title-decor {
   background-color: var(--shadow_color);
 }
-.shadow-text:focus-visible  {
-  border: 1px solid var(--shadow-text_border-color);
+.text-hadow:focus-visible {
+  border: 1px solid var(--text-hadow_border-color);
 }
