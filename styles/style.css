@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-family), monospace;
   inline-size: 100%;
   padding-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   padding-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
@@ -30,7 +30,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  /* row-gap: clamp(3.4375rem, -2.9437rem + 27.2265vw, 10.125rem); от 55px до 162px */
 }
 
 .decorated-zone {
@@ -64,9 +63,9 @@
 .decorated-zone__text {
   display: inline-block;
   color: var(--accent-color);
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   line-height: 25px;
   text-transform: uppercase;
   position: absolute;
@@ -106,12 +105,13 @@
   color: var(--accent-color);
   background-color: transparent;
   text-align: center;
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   text-transform: lowercase;
   cursor: pointer;
   border: 1px solid transparent;
+  transition: 0.5s;
 }
 
 .header__theme-menu-button_active {
@@ -121,7 +121,8 @@
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--button_hover-border_color);
-  transition: .2s;
+  background-color: transparent;
+  transition: 0.3s;
 }
 
 .header__theme-menu-button:focus {
@@ -134,11 +135,8 @@
   border-block-end: 1px solid var(--accent-color);
 }
 
-.header__title {
-}
-
 .title {
-  color: #db00ff;
+  color: var(--title-color);
   text-shadow: 4px 4px 0px var(--shadow_color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
@@ -157,7 +155,7 @@
 .title-decor {
   color: #000028;
   background: #ff0070;
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
@@ -197,14 +195,14 @@
 
 .text-block__title,
 .text-descr__list_subtitle {
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
 }
 
 h4.text-block__item_title {
-  font-weight: 400;
+  font-weight: var(--font-weight);
 }
 
 .text-block__title {
@@ -217,23 +215,25 @@ h4.text-block__item_title {
 
 .text-block__item_description {
   color: var(--text_color);
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   line-height: 23.4px;
 }
 
 .text-hadow {
   color: var(--text_color);
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   line-height: normal;
   text-shadow: 2px 1px 0 var(--shadow_color);
+  transition: 0.3s;
 }
 
 .text-hadow:hover {
   border-block-end: 1px solid var(--text-hadow_border-color);
+  transition: 0.3s;
 }
 
 .text-hadow:focus {
@@ -339,7 +339,7 @@ h4.text-block__item_title {
   }
 
   .header__title {
-   align-self: center;
+    align-self: center;
   }
 
   .header__subtitle {

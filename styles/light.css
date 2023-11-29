@@ -19,18 +19,10 @@
   background-image: url(../images/cover-image-light.png);
 }
 
-p.page.theme_light .decorated-zone__text{
+.page.theme_light .decorated-zone__text {
   display: none;
 }
-.header__theme-menu-button:hover {
-  border: 1px solid var(--button_hover-border_color);
-}
-.header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
-}
+
 .title-decor {
   background-color: var(--shadow_color);
-}
-.text-hadow:focus-visible {
-  border: 1px solid var(--text-hadow_border-color);
 }
