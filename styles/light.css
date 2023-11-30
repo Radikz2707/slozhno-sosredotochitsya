@@ -15,14 +15,9 @@
   --text_color: #353430;
   --text-hadow_border-color: #353430;
   --button_hover-border_color: rgba(50, 49, 45, 0.4);
-
   background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .decorated-zone__text {
   display: none;
-}
-
-.title-decor {
-  background-color: var(--shadow_color);
 }

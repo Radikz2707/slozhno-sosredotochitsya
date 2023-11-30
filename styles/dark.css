@@ -12,7 +12,3 @@
 
   background-image: url(../images/cover-image-dark.png);
 }
-
-.header__theme-menu-button:hover {
-  border: 1px solid var(--button_hover-border_color);
-}

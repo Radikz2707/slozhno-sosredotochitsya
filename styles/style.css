@@ -25,7 +25,7 @@
 }
 
 .header {
-  block-size: 100vh;
+  min-block-size: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -154,7 +154,7 @@
 
 .title-decor {
   color: #000028;
-  background: #ff0070;
+  background-color: var(--shadow_color);
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 700;
@@ -303,19 +303,19 @@ h4.text-block__item_title {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .img-1 {
+  .main__img-item:nth-child(1) {
     grid-column: span 2;
   }
 
-  .img-2 {
+  .main__img-item:nth-child(2) {
     grid-row: span 2;
   }
 
-  .img-3 {
+  .main__img-item:nth-child(3) {
     grid-row: span 2;
   }
 
-  .img-5 {
+  .main__img-item:nth-child(5) {
     grid-column: span 2;
   }
 }
